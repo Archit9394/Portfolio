@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Archit Shah">
+    <link rel="icon" href="http://icons.iconarchive.com/icons/martin-berube/character/128/Robot-icon.png">
     <title>Archit Shah</title>
 <!-- CSS only -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -22,7 +23,7 @@ crossorigin="anonymous">
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" style="font-size:25px;" href="#">Archit Shah</a>
+            <a class="navbar-brand" style="font-size:25px;" href="#"><img class="pb-1" src="http://icons.iconarchive.com/icons/martin-berube/character/128/Robot-icon.png" style="color:white" height="30"> Archit Shah</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,8 +43,8 @@ crossorigin="anonymous">
   <section class="jumbotron text-center">
     <div class="container">
       <img src="{% static 'Archit.jpg'%}" height="500"/>
-      <h1 class="my-5">Hey There!</h1>
-      <p class="lead text-muted">My name is Archit Shah. I am a Full Stack Web Developer. Welcome to my site. Here, you will find information about my projects and blogs.  </p>
+      <h1 class="my-5">About Me</h1>
+      <p class="lead text-justify text-muted">I am a Robotics Engineer based in Santa Clara, California. I graduated from Santa Clara University with a Master's degree. I have over one year of experience developing Robotics systems. Previously I have worked at Skycart Inc. a drone delivery startup. Over there I helped build a fully autonomous drone by simulating & testing the performance of Model-Free Adaptive Controller on Multi-rotor system and various other non-linear systems. Currently, I am working at Infinite Options LLC.  where we are developing an Autonomous Robot for tracking objects. I offer sound knowledge of ROS, C++, and Python. I expertise in SLAM (Simultaneous Localization and Mapping), Path Planning and Control systems. I have considerable experience with computer vision and deep learning as well. I am currently looking for new opportunities in Robotics and/or Autonomous vehicles industry. I am also available for freelancing. If you would like to know more about me or potentially work together then please feel free to shoot me an email at archit0994@gmail.com </p>
       <p>
         <a href="mailto:archit0994@gmail.com" class="btn btn-info px-4 my-2">Contact Me</a>
       </p>
@@ -56,12 +57,14 @@ crossorigin="anonymous">
       <div class="row">
         {% for job in jobs.all %}
         <div class="col-md-4">
+          <a href="#">
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img card-img-top" height="200" src="{{job.image.url}}"/>
-            <div class="card-body">
-              <p class="card-text">{{job.summary}}</p>
+            <div class="card-body" >
+              <h5 align=center class="card-text">{{job.summary}}</h5>
             </div>
           </div>
+          </a>
         </div>
         {% endfor%}
       </div>
